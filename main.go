@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
-	"gostart/gohangman/hangman"
+	// "gostart/gohangman/hangman"
 	"os"
+
+	"gostart.org/gohangman/hangman"
 	// "gostart.go/hangman/hangman"
 )
 
 func main() {
 	hangman.DrawWelcome()
 	// hangman.Draw
-	g := hangman.New(8, "motadeviner")
+	g := hangman.New(8, "golangenforce")
 	guess := ""
 	for {
 		hangman.Draw(g, guess)
