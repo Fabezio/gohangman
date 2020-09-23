@@ -146,21 +146,32 @@ func drawState(g *Game, guess string) {
 	case "badGuess":
 		fmt.Printf("Non, '%s' n'est pas dans ce mot \n", guess)
 	case "lost":
-		fmt.Print("Perdu! :( Le mot était: ")
+		fmt.Println(`
+        .-""""""-.
+      .'          '.
+     /   O      O   \
+    :                :
+    |                |   
+    :    .------.    :
+     \  '        '  /
+      '.          .'
+    	'-......-'
+		`)
+		fmt.Print("Perdu! Le mot était: ")
 		drawLetters(g.Letters)
 	case "won":
-		fmt.Print(`
-		  .-""""""-.
-		.'          '.
-	   /   O      O   \
-	  :                :
-	  |                |   
-	  : ',          ,' :
-	   \  '-......-'  /
-		'.          .'
-	      '-......-'
+		fmt.Println(`
+        .-""""""-.
+      .'          '.
+     /   O      O   \
+    :                :
+    |                |   
+    : ',          ,' :
+     \  '-......-'  /
+      '.          .'
+        '-......-'
 		`)
-		fmt.Print("BRAVO!  Le mot était: ")
+		fmt.Print("BRAVO! Le mot était: ")
 		drawLetters(g.Letters)
 	}
 }
