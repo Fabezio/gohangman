@@ -149,6 +149,17 @@ func drawState(g *Game, guess string) {
 		fmt.Print("Perdu! :( Le mot était: ")
 		drawLetters(g.Letters)
 	case "won":
+		fmt.Print(`
+		  .-""""""-.
+		.'          '.
+	   /   O      O   \
+	  :                :
+	  |                |   
+	  : ',          ,' :
+	   \  '-......-'  /
+		'.          .'
+	      '-......-'
+		`)
 		fmt.Print("BRAVO!  Le mot était: ")
 		drawLetters(g.Letters)
 	}
