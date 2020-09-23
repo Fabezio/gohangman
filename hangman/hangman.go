@@ -45,9 +45,8 @@ func (g *Game) MakeAGuess(guess string) {
 			g.State = "lost"
 		}
 	}
-	
-}
 
+}
 
 func (g *Game) LoseTurn(guess string) {
 	g.TurnsLeft -= 1
